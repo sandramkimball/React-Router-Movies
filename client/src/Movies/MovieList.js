@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 const MovieList = () => {
@@ -31,7 +31,7 @@ const MovieList = () => {
 }
 
 function MovieDetails({ movie }) {
-  const { title, director, metascore, stars } = movie;
+  const { id, title, director, metascore, stars } = movie;
   return (
     <NavLink to={`/movies/${movie.id}`}>
       <h2>{title}</h2>
